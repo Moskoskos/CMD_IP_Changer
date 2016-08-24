@@ -3,7 +3,7 @@ COLOR 0A
 cls 
 :start
 
-SET nic="Ethernet"
+SET nic=Ethernet
 SET desc1="PLC Network"
 SET desc2="NAT outside"
 SET ip1=192.168.0.100
@@ -37,7 +37,7 @@ EXIT
 
 :con2 
 ECHO Changing IP for %nic%...
-netsh interface ip set address "%nic% static %ip2% 255.255.255.0 124.0.0.1 1 
+netsh interface ip set address %nic% static %ip2% 255.255.255.0 124.0.0.1 1 
 ECHO IP: %ip2% 
 Pause 
 EXIT 
