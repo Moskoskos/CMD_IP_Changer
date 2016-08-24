@@ -3,8 +3,8 @@ COLOR 0A
 cls 
 :start 
 ECHO. 
-ECHO 1. "Insert Description Here"        "Insert IP Here" 
-ECHO 2. "Insert Description Here"        "Insert IP Here"        
+ECHO 1. "PLC Network"			 "192.168.0.100" 
+ECHO 2. "NAT outside"        		 "192.168.12.100"        
 ECHO 3. "Insert Description Here"        "Insert IP Here"
 ECHO 4. "Insert Description Here"        "Insert IP Here"
 ECHO 5. "Insert Description Here"        "Insert IP Here"
@@ -29,14 +29,14 @@ goto start
 :: They will also change your IP to the IP stated after the word static
 :con1 
 ECHO Changing IP for Local Area Connection...
-netsh interface ip set address "Ethernet" static 10.111.103.175 255.255.255.0 124.0.0.1 1 
+netsh interface ip set address "Ethernet" static 192.168.0.100 255.255.255.0 124.0.0.1 1 
 ECHO IP: "INSERT IP" 
 Pause 
 EXIT 
 
 :con2 
 ECHO Changing IP for Local Area Connection...
-netsh interface ip set address "Ethernet" static 192.168.13.198 255.255.255.0 124.0.0.1 1 
+netsh interface ip set address "Ethernet" static 192.168.12.100 255.255.255.0 124.0.0.1 1 
 ECHO IP: "INSERT IP" 
 Pause 
 EXIT 
