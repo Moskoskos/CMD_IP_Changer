@@ -29,7 +29,7 @@ goto start
 :: Keep in that these commands are looking for the name of your NIC.  Change this accordingly. Currently named "Ethernet"
 :: They will also change your IP to the IP stated after the word static
 :con1 
-ECHO Changing IP for Local Area Connection...
+ECHO Changing IP for %nic%...
 netsh interface ip set address %nic% static %ip1% 255.255.255.0 124.0.0.1 1 
 ECHO IP: %ip1%
 Pause 
