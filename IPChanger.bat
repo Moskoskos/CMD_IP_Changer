@@ -3,7 +3,7 @@ COLOR 0A
 cls 
 :start
 
-SET nic="Ethernet
+SET nic="Ethernet"
 SET desc1="PLC Network"
 SET desc2="NAT outside"
 SET ip1=192.168.0.100
