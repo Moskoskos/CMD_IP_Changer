@@ -31,19 +31,19 @@ goto start
 :con1 
 ECHO Changing IP for Local Area Connection...
 netsh interface ip set address %nic% static %ip1% 255.255.255.0 124.0.0.1 1 
-ECHO IP: "INSERT IP" 
+ECHO IP: %ip1%
 Pause 
 EXIT 
 
 :con2 
-ECHO Changing IP for Local Area Connection...
+ECHO Changing IP for %nic%...
 netsh interface ip set address "%nic% static %ip2% 255.255.255.0 124.0.0.1 1 
-ECHO IP: "INSERT IP" 
+ECHO IP: %ip2% 
 Pause 
 EXIT 
 
 :con3
-ECHO Changing IP for Local Area Connection...
+ECHO Changing IP for %nic%...
 netsh interface ip set address name=%nic% source=dhcp
 netsh interface ip set dns name=%nic% source=dhcp
 ECHO DHCP activated
