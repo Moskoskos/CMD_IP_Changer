@@ -12,7 +12,7 @@ SET ip2=192.168.12.100
 ECHO. 
 ECHO 1. %desc1%	%ip1%
 ECHO 2. %desc2%	%ip2%       
-ECHO 3. Automatisk / DHCP         
+ECHO 3. Automatic / DHCP         
 ECHO 4. Exit 
 set choice= 
 set /p choice=Type a number and press Enter to assign a new IP to the Local Area Connection : 
