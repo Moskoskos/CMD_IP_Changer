@@ -49,5 +49,3 @@ netsh interface ip set dns name=%nic% source=dhcp
 ECHO DHCP activated
 Pause
 EXIT
-
-::Atle
