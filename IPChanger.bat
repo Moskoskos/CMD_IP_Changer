@@ -18,15 +18,15 @@ SET gw2=192.168.12.100
 ECHO. 
 ECHO 1. %desc1%	%ip1%
 ECHO 2. %desc2%	%ip2%       
-ECHO 3. Automatic / DHCP         
-ECHO 4. Exit 
+ECHO 9. Automatic / DHCP         
+ECHO 10. Exit 
 set choice= 
 set /p choice=Type a number and press Enter to assign a new IP to the %nic% : 
 if not '%choice%'=='' set choice =%choice:~0,1% 
 if '%choice%'=='1' goto con1 
 if '%choice%'=='2' goto con2 
-if '%choice%'=='3' goto con6 
-if '%choice%'=='4' goto end 
+if '%choice%'=='9' goto con9
+if '%choice%'=='10' goto end 
 ECHO "%choice%" is not valid, try again 
 Pause 
 ECHO. 
@@ -48,7 +48,7 @@ ECHO IP: %ip2%
 Pause 
 EXIT 
 
-:con3
+:con9
 ECHO Changing IP for %nic%...
 netsh interface ip set address name=%nic% source=dhcp
 netsh interface ip set dns name=%nic% source=dhcp
