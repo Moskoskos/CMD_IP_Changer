@@ -1,4 +1,5 @@
 @ECHO off 
+:: In loving memory of my 1337 skills we apply the proper text color.
 COLOR 0A 
 cls 
 :start
