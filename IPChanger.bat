@@ -21,7 +21,7 @@ ECHO 2. %desc2%	%ip2%
 ECHO 3. Automatic / DHCP         
 ECHO 4. Exit 
 set choice= 
-set /p choice=Type a number and press Enter to assign a new IP to the Local Area Connection : 
+set /p choice=Type a number and press Enter to assign a new IP to the %nic% : 
 if not '%choice%'=='' set choice =%choice:~0,1% 
 if '%choice%'=='1' goto con1 
 if '%choice%'=='2' goto con2 
@@ -32,7 +32,7 @@ Pause
 ECHO. 
 goto start 
 
-:: Keep in that these commands are looking for the name of your NIC.  Change this accordingly. Currently named "Ethernet"
+:: These commands are looking for the name of your NIC.  Change this accordingly. Currently named "%nic%".
 :: They will also change your IP to the IP stated after the word static
 :con1 
 ECHO Changing IP for %nic%...
